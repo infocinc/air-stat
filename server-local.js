@@ -5,12 +5,23 @@ app.use(express.logger());
 
 var title = '';
 app.set('title', title);
+app.set('views', __dirname + '/views');
+app.set('view engine','jade');
 
 app.get('/', function(req, res){
+
     res.sendfile('index.html');
 });
 
 app.use(express.static(__dirname + '/public'));
+app.use(function(req,res) {
+	res.status(404);
+    res.render('404.jade', {title: '404: File Not Found'});
+});
+app.use(function(error,req,res,next) {
+    res.status(500);
+    res.render('500.jade', {title:'500: Internal Server Error', error: error});
+});
 
 var server = app.listen(process.env.PORT, '192.168.1.6', function() { 
  console.log(__dirname);
