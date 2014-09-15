@@ -1,0 +1,141 @@
+@import (reference) "variables.less";
+/*/////////////////////////////////////////
+// Helper Classes
+//////////////////////////////////////////*/
+
+
+.mobile-hide {
+  display: none ;
+  @media screen and (min-width: @screen-sm-min) {
+    display:block;
+  }
+}
+
+
+.yellow {
+  color: @yellow !important;
+}
+.darkRed {
+  color: @darkRed !important;
+}
+.white {
+  color: @white !important;
+}
+
+.white-2 {
+  color: @white-2 !important;
+}
+
+.midnight {
+  color: @midnight !important;
+}
+
+.blue {
+    color:@blue !important;
+}
+.darkblue {
+  color: @darkBlue !important;
+}
+.red {
+    color:@red !important;
+}
+.darkgreen { 
+    color: @darkGreen !important;
+}
+
+.green {
+    color:@green !important;
+}
+
+.purple {
+    color:@purple !important;
+}
+
+.orange {
+    color:@orange !important;
+}
+
+.background {
+    &-none {
+    background: none !important;
+  }
+    &-lightGray {
+      background: @lightGray !important
+    }
+  &-lightGray-2 {
+      background: @lightGray-2 !important
+    }
+    &-black {
+      background: #000 !important;
+    }
+    &-dark {
+        background: @dark !important;
+    }
+
+    &-red {
+        background: @red !important;
+    }
+    &-blue {
+        background: @blue !important;
+    }
+
+    &-orange {
+        background: @orange !important;
+    }
+
+    &-purple {
+        background: @purple !important;
+    }
+
+    &-green {
+        background: @green !important;
+    }
+
+    &-midnight {
+        background: @midnight !important;
+    }
+}
+
+
+.clearfix {
+    &:before, &:after {
+        content:" ";
+        display: table;
+    }
+    &:after {
+        clear:both
+    }
+}
+
+
+.nostyle {
+    list-style: none;
+}
+
+
+.center {
+    margin: 0 auto;
+}
+
+
+.border {
+    border:1px solid;
+    border-radius: 5px;
+}
+
+.media-state {
+  color: #000;
+  font-size: 1px;
+  @media screen and (min-width:@screen-sm-min) {
+    font-size: 2px;
+  }
+ @media screen and (min-width:@screen-md-min) {
+   font-size: 3px;
+  }
+  @media screen and (min-width:@screen-lg-min) and (min-height:@screen-height-wide) {
+    font-size: 4px;
+  }
+  @media screen and (min-width:@screen-wide-min) and (min-height:@screen-height-wide) {
+    font-size: 5px;
+  }
+}
